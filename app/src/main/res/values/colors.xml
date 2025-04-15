@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="black50">#7F000000</color>
+    <color name="black2">#1F1F1F</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white2">#FFFFFF</color>
+    <color name="white50">#80FFFFFF</color>
+    <color name="white80">#CBFFFFFF</color>
+    <color name="white70">#B3FFFFFF</color>
+    <color name="orange">#D88B02</color>
+    <color name="dark_gray">#252525</color>
+    <color name="white_gray">#CFCFCF</color>
+    <color name="gray">#C4C4C4</color>
+    <color name="gray_normal">#434343</color>
+    <color name="yellow">#FFF599</color>
+    <color name="violet">#B69CFF</color>
+    <color name="ping">#FD99FF</color>
+    <color name="red">#FF9E9E </color>
+    <color name="green">#91F48F</color>
+    <color name="blue">#9EFFFF</color>
+    <color name="middle_gray">#535353</color>
+    <color name="color_selection_bg_gray">#5B5B5B</color>
+    <color name="border_gray">#747775</color>
 </resources>

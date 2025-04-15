@@ -1,3 +1,45 @@
 <resources>
-    <string name="app_name">NoteApp</string>
+    <string name="app_name">Note</string>
+    <string name="notes_all_notes_title">Все заметки</string>
+    <string name="notes_search_notes_hint">Поиск заметок</string>
+    <string name="detail_ready_text">Готово</string>
+    <string name="onboard_skip_text">Пропустить</string>
+    <string name="onboard_notes_title">Notes</string>
+    <string name="onboard_start_text">Начать</string>
+    <string name="onboard_convenience_title">Удобство</string>
+    <string name="onboard_convenience_text">Создавайте заметки в два клика! Записывайте мысли, идеи и важные задачи мгновенно.</string>
+    <string name="onboard_organization_title">Организация</string>
+    <string name="onboard_organization_text">Организуйте заметки по папкам и тегам. Легко находите нужную информацию в любое время.</string>
+    <string name="onboard_synchronization_title">Синхронизация</string>
+    <string name="onboard_synchronization_text">Синхронизация на всех устройствах. Доступ к записям в любое время и в любом месте.</string>
+    <string name="content_description">Изображение не загрузилось</string>
+    <string name="notes_empty_notes_activity">Пока пусто</string>
+    <string name="detail_color_selection_title">Поменять цвет</string>
+    <string name="notes_note_delete_alert_dialog">Удалить заметку?</string>
+    <string name="notes_note_no_text">Отмена</string>
+    <string name="notes_note_yes_text">Удалить</string>
+    <!-- Months -->
+    <string name="month_january">Январь</string>
+    <string name="month_february">Февраль</string>
+    <string name="month_march">Март</string>
+    <string name="month_april">Апрель</string>
+    <string name="month_may">Май</string>
+    <string name="month_june">Июнь</string>
+    <string name="month_july">Июль</string>
+    <string name="month_august">Август</string>
+    <string name="month_september">Сентябрь</string>
+    <string name="month_october">Октябрь</string>
+    <string name="month_november">Ноябрь</string>
+    <string name="month_december">Декабрь</string>
+
+    <string name="default_web_client_id">605675541727-452iu9vb47l4uk3vgkh3nqsue2c1dblu.apps.googleusercontent.com</string>
+    <string name="auth_text">Авторизация</string>
+    <string name="google_auth_sign_with_google_text">Sign in with Google</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="store_add_text">Add</string>
+    <string name="menu_onboard_title">Onboard</string>
+    <string name="menu_notes_title">Notes</string>
+    <string name="menu_store_title">Store</string>
+
 </resources>
