@@ -1,4 +1,4 @@
-package com.example.noteapp.ui.fragments.board
+package com.example.noteapp.ui.onboard
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.noteapp.databinding.FragmentOnboardPageBinding
-import com.example.noteapp.ui.models.OnboardPage
 
 class OnboardPageFragment : Fragment() {
 
