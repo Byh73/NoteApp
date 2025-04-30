@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val navHostFragment =
+        /*val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as? NavHostFragment
         val navController = navHostFragment?.navController ?: return
 
@@ -35,6 +35,24 @@ class MainActivity : AppCompatActivity() {
             navController.navigate(R.id.noteFragment, null, navOptions)
         } else {
             preference.isOnBoardShown = false
+        }'
+
+         */
+
+        preference.unit(this)
+
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as? NavHostFragment
+        val navController = navHostFragment?.navController ?: return
+
+        Log.d("ololo", "is first visit = " + preference.isOnBoardShown)
+        Log.d("ololo", "is auth = " + preference.isAuth)
+        if (!preference.isOnBoardShown && preference.isAuth) {
+            val navOptions = NavOptions.Builder().setPopUpTo(R.id.boardFragment, true).build()
+            navController.navigate(R.id.googleAuthFragment, null, navOptions)
+        } else if (!preference.isAuth) {
+            Log.d("ololo", "is auth = " + preference.isAuth)
+            val navOptions = NavOptions.Builder().setPopUpTo(R.id.googleAuthFragment, true).build()
+            navController.navigate(R.id.noteFragment, null, navOptions)
         }
     }
 }

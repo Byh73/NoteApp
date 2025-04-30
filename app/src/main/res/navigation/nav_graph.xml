@@ -11,8 +11,8 @@
         android:label="fragment_board"
         tools:layout="@layout/fragment_board" >
         <action
-            android:id="@+id/action_boardFragment_to_noteFragment"
-            app:destination="@id/noteFragment" />
+            android:id="@+id/action_boardFragment_to_googleAuthFragment"
+            app:destination="@id/googleAuthFragment" />
     </fragment>
     <fragment
         android:id="@+id/noteFragment"
@@ -35,5 +35,14 @@
         <argument
             android:name="noteId"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/googleAuthFragment"
+        android:name="com.example.noteapp.ui.fragments.auth.GoogleAuthFragment"
+        android:label="fragment_google_auth"
+        tools:layout="@layout/fragment_google_auth" >
+        <action
+            android:id="@+id/action_googleAuthFragment_to_noteFragment"
+            app:destination="@id/noteFragment" />
     </fragment>
 </navigation>
