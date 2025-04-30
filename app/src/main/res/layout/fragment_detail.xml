@@ -1,15 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.note.DetailFragment"
-    android:background="@color/black">
+    android:background="@color/dark_gray"
+    tools:context=".ui.fragments.detail.DetailFragment"
+    android:paddingHorizontal="20dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <FrameLayout
+        android:id="@+id/top_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:src="@drawable/ic_detail_back" />
+
+            <TextView
+                android:id="@+id/dateDayOfMonthTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/white80"
+                tools:text="30" />
+
+            <TextView
+                android:id="@+id/dateMonthTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:textColor="@color/white80"
+                tools:text="may" />
+
+            <TextView
+                android:id="@+id/dateHourTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white50"
+                tools:text="17" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/white50" />
+
+            <TextView
+                android:id="@+id/dateMinuteTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white50"
+                tools:text="17" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical">
+
+            <ImageView
+                android:id="@+id/changeColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/overflow_menu" />
+
+            <TextView
+                android:id="@+id/readyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:text="@string/detail_ready_text"
+                android:textColor="@color/orange"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:textColor="@color/white70"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/top_bar" />
+
+    <EditText
+        android:id="@+id/textEditText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:gravity="start|top"
+        android:paddingTop="12dp"
+        android:textColor="@color/white70"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleEditText" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/colorSelection"
+        android:layout_width="152dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/color_selection_bg_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        tools:context=".view.fragments.detail.SelectionColorFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:text="@string/detail_color_selection_title"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <GridLayout
+                android:id="@+id/colors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3">
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/yellow_color_background"
+                    app:cardCornerRadius="4dp" />
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/violet_color_background"
+                    app:cardCornerRadius="4dp" />
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/ping_color_background"
+                    app:cardCornerRadius="4dp" />
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/red_color_background"
+                    app:cardCornerRadius="4dp" />
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/green_color_background"
+                    app:cardCornerRadius="4dp" />
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/blue_color_background"
+                    app:cardCornerRadius="4dp" />
+            </GridLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

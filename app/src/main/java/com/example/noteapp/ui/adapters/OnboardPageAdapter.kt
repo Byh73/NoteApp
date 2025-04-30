@@ -3,8 +3,8 @@ package com.example.noteapp.ui.adapters
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.noteapp.ui.onboard.OnboardPageFragment
-import com.example.noteapp.ui.onboard.OnboardPage
+import com.example.noteapp.ui.fragments.onboard.OnboardPageFragment
+import com.example.noteapp.ui.fragments.onboard.OnboardPage
 
 class OnboardPageAdapter(fragment: Fragment, private val onboardPages : ArrayList<OnboardPage>) : FragmentStateAdapter(fragment) {
     override fun createFragment(position: Int): Fragment {
