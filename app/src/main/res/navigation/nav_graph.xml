@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/boardFragment"
-        android:name="com.example.noteapp.ui.onboard.BoardFragment"
+        android:name="com.example.noteapp.ui.fragments.onboard.BoardFragment"
         android:label="fragment_board"
         tools:layout="@layout/fragment_board" >
         <action
@@ -29,7 +29,11 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.noteapp.ui.fragments.note.DetailFragment"
+        android:name="com.example.noteapp.ui.fragments.detail.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="noteId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

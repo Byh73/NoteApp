@@ -1,4 +1,4 @@
-package com.example.noteapp.ui.onboard
+package com.example.noteapp.ui.fragments.onboard
 
 import java.io.Serializable
 
