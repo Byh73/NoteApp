@@ -40,6 +40,6 @@
     <string name="store_add_text">Add</string>
     <string name="menu_onboard_title">Onboard</string>
     <string name="menu_notes_title">Notes</string>
-    <string name="menu_store_title">Store</string>
+    <string name="menu_auth_title">Auth</string>
 
 </resources>

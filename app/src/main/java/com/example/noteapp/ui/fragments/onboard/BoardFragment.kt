@@ -11,10 +11,13 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.noteapp.R
 import com.example.noteapp.databinding.FragmentBoardBinding
 import com.example.noteapp.ui.adapters.OnboardPageAdapter
+import com.example.noteapp.utils.PreferenceHelper
 
 class BoardFragment : Fragment() {
 
     private lateinit var binding : FragmentBoardBinding
+    private val preference = PreferenceHelper()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,6 +33,7 @@ class BoardFragment : Fragment() {
     }
 
     private fun initialize() {
+        preference.unit(requireActivity())
         val onboardPageAdapter = OnboardPageAdapter(this@BoardFragment, generateOnBoardPages());
         binding.onboardViewPager2.adapter = onboardPageAdapter
     }
@@ -70,7 +74,8 @@ class BoardFragment : Fragment() {
     }
 
     private fun toNotesFragment() {
-        findNavController().navigate(R.id.action_boardFragment_to_noteFragment)
+        preference.isOnBoardShown = false
+        findNavController().navigate(R.id.action_boardFragment_to_googleAuthFragment)
     }
 
     private fun changeActiveOnboardShower(position : Int) {
